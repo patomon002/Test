@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool: Default
+
+jobs:
+  - job: job1
+    steps:
+      - script: echo "This is job 1"
+        displayName: The is to echo job 1
+      - script: ping 127.0.0.1 -n 100
+        displayName: Ping in progress
+
+  - job: job2
+    steps:
+     - script: echo "This is job 2"
+       displayName: Job 2
+     - script: ping google.com -n 100
+       displayName: Pinging googlw
+
+       
