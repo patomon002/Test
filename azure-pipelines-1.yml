@@ -13,14 +13,14 @@ jobs:
     steps:
       - script: echo "This is job 1"
         displayName: The is to echo job 1
-      - script: ping 127.0.0.1
+      - script: ping -c 20 127.0.0.1
         displayName: Ping in progress
 
   - job: job2
     steps:
      - script: echo "This is job 2"
        displayName: Job 2
-     - script: ping google.com
+     - script: ping -c 20 google.com
        displayName: Pinging googlw
 
        
